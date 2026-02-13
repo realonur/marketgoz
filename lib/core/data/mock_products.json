@@ -1,0 +1,197 @@
+{
+  "products": {
+    "8699273590114": {
+      "name": "Süt 1L",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 25.50,
+      "weight": "1000ml"
+    },
+    "8690504002020": {
+      "name": "Yoğurt 500g",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 18.75,
+      "weight": "500g"
+    },
+    "8690632007014": {
+      "name": "Ekmek",
+      "brand": "Uno",
+      "category": "Fırın Ürünleri",
+      "price": 5.50,
+      "weight": "350g"
+    },
+    "8690632010014": {
+      "name": "Tost Ekmeği",
+      "brand": "Uno",
+      "category": "Fırın Ürünleri",
+      "price": 12.00,
+      "weight": "500g"
+    },
+    "8690504005014": {
+      "name": "Peynir Beyaz",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 85.00,
+      "weight": "500g"
+    },
+    "8690777001014": {
+      "name": "Domates Salçası",
+      "brand": "Tamek",
+      "category": "Konserve",
+      "price": 22.50,
+      "weight": "700g"
+    },
+    "8690888001014": {
+      "name": "Şeker",
+      "brand": "Türk Şeker",
+      "category": "Şeker",
+      "price": 18.00,
+      "weight": "1000g"
+    },
+    "8690999001014": {
+      "name": "Çay",
+      "brand": "Çaykur",
+      "category": "İçecek",
+      "price": 48.00,
+      "weight": "500g"
+    },
+    "8690504003010": {
+      "name": "Kaşar Peyniri",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 92.50,
+      "weight": "600g"
+    },
+    "8690504004015": {
+      "name": "Tereyağı",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 65.00,
+      "weight": "250g"
+    },
+    "8690632008011": {
+      "name": "Sandviç Ekmeği",
+      "brand": "Uno",
+      "category": "Fırın Ürünleri",
+      "price": 15.50,
+      "weight": "400g"
+    },
+    "8690777002011": {
+      "name": "Biber Salçası",
+      "brand": "Tamek",
+      "category": "Konserve",
+      "price": 24.00,
+      "weight": "700g"
+    },
+    "8690777003018": {
+      "name": "Zeytinyağı",
+      "brand": "Tamek",
+      "category": "Yağlar",
+      "price": 185.00,
+      "weight": "1000ml"
+    },
+    "8690888002011": {
+      "name": "Pudra Şekeri",
+      "brand": "Türk Şeker",
+      "category": "Şeker",
+      "price": 22.00,
+      "weight": "500g"
+    },
+    "8690999002011": {
+      "name": "Papatya Çayı",
+      "brand": "Çaykur",
+      "category": "İçecek",
+      "price": 35.00,
+      "weight": "100g"
+    },
+    "8691234001012": {
+      "name": "Makarna Spaghetti",
+      "brand": "Oba",
+      "category": "Bakliyat",
+      "price": 16.50,
+      "weight": "500g"
+    },
+    "8691234002019": {
+      "name": "Bulgur Pilavlık",
+      "brand": "Duru",
+      "category": "Bakliyat",
+      "price": 28.00,
+      "weight": "1000g"
+    },
+    "8691234003016": {
+      "name": "Pirinç Baldo",
+      "brand": "Dursu",
+      "category": "Bakliyat",
+      "price": 45.00,
+      "weight": "1000g"
+    },
+    "8692345001019": {
+      "name": "Bebek Bezi L",
+      "brand": "Molfix",
+      "category": "Bebek Ürünleri",
+      "price": 165.00,
+      "weight": "40 adet"
+    },
+    "8692345002016": {
+      "name": "Islak Mendil",
+      "brand": "Molfix",
+      "category": "Bebek Ürünleri",
+      "price": 42.00,
+      "weight": "90 yaprak"
+    },
+    "8693456001016": {
+      "name": "Deterjan Sıvı",
+      "brand": "Ariel",
+      "category": "Temizlik",
+      "price": 85.00,
+      "weight": "1500ml"
+    },
+    "8693456002013": {
+      "name": "Bulaşık Deterjanı",
+      "brand": "Fairy",
+      "category": "Temizlik",
+      "price": 45.00,
+      "weight": "500ml"
+    },
+    "8694567001013": {
+      "name": "Kırmızı Mercimek",
+      "brand": "Duru",
+      "category": "Bakliyat",
+      "price": 32.00,
+      "weight": "1000g"
+    },
+    "8694567002010": {
+      "name": "Nohut",
+      "brand": "Duru",
+      "category": "Bakliyat",
+      "price": 38.00,
+      "weight": "1000g"
+    },
+    "8695678001010": {
+      "name": "Ayçiçek Yağı",
+      "brand": "Yudum",
+      "category": "Yağlar",
+      "price": 95.00,
+      "weight": "1000ml"
+    }
+  },
+  "metadata": {
+    "description": "Mock product database for barcode scanning tests",
+    "last_updated": "2025-12-19",
+    "total_products": 25,
+    "instructions": {
+      "barcode_format": "EAN-13 (13 digits)",
+      "how_to_add": "Add new products in the 'products' object with barcode as key",
+      "required_fields": ["name", "brand", "category", "price", "weight"],
+      "price_format": "Decimal number (Turkish Lira)",
+      "weight_format": "String with unit (e.g., '500g', '1000ml', '40 adet')"
+    },
+    "test_scenarios": {
+      "basic_scan": "Use any barcode from the list",
+      "not_found": "Use a barcode not in the list (e.g., '1111111111111')",
+      "price_comparison": "Scan multiple products to test shopping list features",
+      "category_filter": "Products are organized by category for filtering tests"
+    }
+  }
+}

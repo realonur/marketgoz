@@ -1,0 +1,97 @@
+# ===== Flutter / Dart =====
+*.dart.js
+*.js_
+*.js.deps
+*.js.map
+.dart_tool/
+.packages
+build/
+.pub-cache/
+.pub/
+pubspec.lock
+
+# ===== FVM =====
+.fvm/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# ===== macOS =====
+.DS_Store
+**/.DS_Store
+
+# ===== Android =====
+**/android/**/gradle-wrapper.jar
+**/android/.gradle
+**/android/captures/
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+*.jks
+*.keystore
+
+# ===== iOS / macOS =====
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/project.xcworkspace/
+**/ios/**/xcuserdata
+**/ios/.generated/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+
+# ===== ML / YOLO Model Files =====
+*.pt
+*.onnx
+*.tflite
+*.pb
+*.h5
+*.pkl
+*.npy
+*.weights
+*.caffemodel
+*.pth
+*.tar.gz
+*.mlpackage/
+yolov8n_saved_model/
+yolo-export/
+
+# ===== ML Training (Python venv, datasets, runs) =====
+ml_training/venv/
+ml_training/runs/
+ml_training/datasets/
+ml_training/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+
+# ===== Environment & Secrets =====
+.env
+.env.*
+*.env
+google-services.json
+GoogleService-Info.plist
+firebase_app_id_file.json
+
+# ===== Misc =====
+*.log
+*.tmp
+*.bak
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+devtools_options.yaml

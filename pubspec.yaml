@@ -1,0 +1,92 @@
+name: marketgoz
+description: "AI-powered shopping assistant for visually impaired users with barcode scanning and expiry date detection"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # ML Kit for barcode, text, and object recognition
+  google_mlkit_barcode_scanning: ^0.14.1
+  google_mlkit_text_recognition: ^0.15.0
+  google_mlkit_object_detection: ^0.15.0
+  
+  # Image processing for color extraction
+  image: ^4.1.3
+  
+  # Local storage for product signatures
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Camera
+  camera: ^0.11.0
+  permission_handler: ^11.3.1
+  
+  # Firebase
+  firebase_core: ^3.8.0
+  firebase_database: ^11.1.7
+  
+  # Text-to-Speech (built-in iOS/Android engines)
+  flutter_tts: ^4.2.0
+  
+  # State Management
+  provider: ^6.1.2
+  
+  
+  # Date & Localization
+  intl: ^0.20.2
+  
+  # UI/UX
+  vibration: ^2.0.0
+  audioplayers: ^6.1.0
+  
+  # Utils
+  cupertino_icons: ^1.0.8
+  share_plus: ^7.2.2
+  
+  # HTTP for AI API calls
+  http: ^1.2.0
+  html: ^0.15.4
+  
+  # Shake detection
+  sensors_plus: ^4.0.2
+  
+  # Image compression
+  flutter_image_compress: ^2.1.0
+  
+  # Local storage for product database
+  shared_preferences: ^2.2.2
+  
+  # UUID generation
+  uuid: ^4.0.0
+  
+  # URL Launcher for Google Search
+  url_launcher: ^6.2.5
+  
+  # WebSocket for Live API
+  web_socket_channel: ^3.0.1
+  openfoodfacts: ^3.28.0
+  google_mlkit_image_labeling: ^0.14.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # High contrast assets
+  assets:
+    - assets/sounds/
+    - assets/images/
+    # Smart Vision model removed
+    # Add your YOLO model files here if bundling locally, e.g.:
+    # - assets/models/yolo11n.tflite
+    # - assets/models/yolo11n-seg.tflite

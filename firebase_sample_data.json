@@ -1,0 +1,133 @@
+# Sample Firebase Database structure for MarketGöz
+# Upload this to Firebase Realtime Database to test the app
+
+{
+  "products": {
+    "8690504001016": {
+      "name": "Süt 1L",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 25.50,
+      "weight": "1000ml"
+    },
+    "8690504002020": {
+      "name": "Yoğurt 500g",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 18.75,
+      "weight": "500g"
+    },
+    "8690632007014": {
+      "name": "Ekmek",
+      "brand": "Uno",
+      "category": "Fırın Ürünleri",
+      "price": 5.50,
+      "weight": "350g"
+    },
+    "8690632010014": {
+      "name": "Tost Ekmeği",
+      "brand": "Uno",
+      "category": "Fırın Ürünleri",
+      "price": 12.00,
+      "weight": "500g"
+    },
+    "8690504005014": {
+      "name": "Peynir Beyaz",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 85.00,
+      "weight": "500g"
+    },
+    "8690504006014": {
+      "name": "Kaşar Peyniri",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 95.00,
+      "weight": "500g"
+    },
+    "8690504030014": {
+      "name": "Ayran 1L",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 15.00,
+      "weight": "1000ml"
+    },
+    "8690504040014": {
+      "name": "Tereyağı",
+      "brand": "Pınar",
+      "category": "Süt Ürünleri",
+      "price": 45.00,
+      "weight": "250g"
+    },
+    "8690777001014": {
+      "name": "Domates Salçası",
+      "brand": "Tamek",
+      "category": "Konserve",
+      "price": 22.50,
+      "weight": "700g"
+    },
+    "8690777002014": {
+      "name": "Biber Salçası",
+      "brand": "Tamek",
+      "category": "Konserve",
+      "price": 24.50,
+      "weight": "700g"
+    },
+    "8690555001014": {
+      "name": "Pirinç",
+      "brand": "Baldo",
+      "category": "Bakliyat",
+      "price": 35.00,
+      "weight": "1000g"
+    },
+    "8690555002014": {
+      "name": "Makarna",
+      "brand": "Piyale",
+      "category": "Makarna",
+      "price": 12.50,
+      "weight": "500g"
+    },
+    "8690666001014": {
+      "name": "Sıvı Yağ",
+      "brand": "Yudum",
+      "category": "Yağ",
+      "price": 65.00,
+      "weight": "1000ml"
+    },
+    "8690666002014": {
+      "name": "Zeytinyağı",
+      "brand": "Komili",
+      "category": "Yağ",
+      "price": 185.00,
+      "weight": "500ml"
+    },
+    "8690888001014": {
+      "name": "Şeker",
+      "brand": "Türk Şeker",
+      "category": "Şeker",
+      "price": 18.00,
+      "weight": "1000g"
+    },
+    "8690888002014": {
+      "name": "Tuz",
+      "brand": "Billur",
+      "category": "Baharat",
+      "price": 4.50,
+      "weight": "1000g"
+    },
+    "8690999001014": {
+      "name": "Çay",
+      "brand": "Çaykur",
+      "category": "İçecek",
+      "price": 48.00,
+      "weight": "500g"
+    },
+    "8690999002014": {
+      "name": "Kahve",
+      "brand": "Nescafe",
+      "category": "İçecek",
+      "price": 95.00,
+      "weight": "200g"
+    }
+  }
+}

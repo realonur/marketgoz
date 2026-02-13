@@ -1,0 +1,114 @@
+PROJE ADI:
+MARKETGÖZ: GÖRME ENGELLİLER İÇİN YAPAY ZEKA DESTEKLİ
+AKILLI ALIŞVERİŞ VE SKT ASİSTANI
+GENEL BİLGİLER
+Takım Adı: MekaGöz
+Kategori: Engelsiz Yaşam Teknolojileri
+Seviye: Üniversite
+Takım Kaptanı Adı Soyadı: Onur Sabri Yıldız
+Takım Üyeleri Bilgileri:
+Üye 1: Onur Sabri Yıldız, Mekatronik Mühendisliği, 3.Sınıf
+Üye 2: Tuğba Asude Nacar, Mekatronik Mühendisliği, 3.Sınıf
+1. PROJE ÖZETİ
+Bu proje, görme engelli bireylerin market alışverişlerinde yaşadığı bağımlılık
+sorununu ortadan kaldırmayı ve gıda güvenliğini sağlamayı amaçlayan yapay zeka
+tabanlı bir mobil uygulamadır. Görme engelli bireyler, ürünlerin ambalaj benzerlikleri
+nedeniyle yanlış ürün alma ve son kullanma tarihlerini (SKT) okuyamama gibi
+problemlerle karşılaşmaktadır. "MarketGöz", mobil cihaz kamerasını kullanarak ürün
+barkodlarını tanır, Türkiye yerel ürün veritabanı (GS1) ile eşleştirerek ürünün tam
+adını ve fiyatını sesli olarak kullanıcıya bildirir. Projenin en özgün değeri; görüntü
+işleme (OCR) teknolojisini kullanarak karmaşık ambalaj yüzeyleri üzerindeki son
+kullanma tarihlerini (SKT) tespit etmesi ve kullanıcıyı gıda zehirlenmesi riskine karşı
+uyarmasıdır. Yazılım tabanlı, düşük maliyetli ve erişilebilir bir çözüm olan
+MarketGöz; İSTEFEST Engelsiz Yaşam Teknolojileri kategorisinde, "bağımsız
+yaşam" ve "dijital erişim" hedeflerine yönelik, yerli kaynaklarla geliştirilmiş yenilikçi
+bir sosyal sorumluluk projesidir.
+2. ÇÖZÜM ÜRETTİĞİ PROBLEM / İHTİYAÇ
+Dünya Sağlık Örgütü verilerine ve Türkiye istatistiklerine göre, görme engelli
+bireylerin en büyük sosyal bariyerlerinden biri "bağımsız hareket" kısıtlılığıdır.
+Market alışverişi gibi temel bir ihtiyaçta dahi refakatçiye duyulan zorunluluk, bireyin
+özgürlüğünü kısıtlamaktadır.
+Projemizin odaklandığı somut problemler şunlardır:
+• Ürün Ayırt Etme Zorluğu: Dokunma duyusu ile ayırt edilemeyen (örneğin; çamaşır
+suyu şişesi ile su şişesi veya tuz ile şeker paketi) ürünlerin karıştırılması hayati
+riskler taşımaktadır.
+• Gıda Güvenliği ve SKT Sorunu: Görme engelli bireyler, satın aldıkları veya
+evlerinde bulunan ürünlerin Son Kullanma Tarihlerini (SKT) okuyamamaktadır. Bu
+durum, bozuk gıda tüketimine ve zehirlenmelere yol açabilmektedir.
+• Mevcut Çözümlerin Yetersizliği: Piyasada bulunan mevcut çözümler genellikle
+İngilizce odaklıdır veya Türkiye'deki yerel market ürünlerine ve Türkçe sesli geri
+bildirime tam optimize edilmemiştir.
+3. AMAÇ VE HEDEFLER
+Projenin Temel Amacı: Görme engelli bireylerin market alışverişlerini kimseden
+yardım almadan, güvenli ve hızlı bir şekilde yapabilmelerini sağlamaktır.
+Ölçülebilir Hedefler:
+• Doğruluk: Geliştirilen OCR algoritması ile ambalaj üzerindeki tarih formatlarının
+%90 ve üzeri doğrulukla tespit edilmesi.
+• Hız: Barkod tarama ve sesli geri bildirim süresinin 2 saniyenin altına indirilerek
+akıcı bir alışveriş deneyimi sunulması.
+• Erişilebilirlik: Uygulamanın TalkBack (Android) ve VoiceOver (iOS) ekran
+okuyucuları ile %100 uyumlu çalışması.
+Sayfa 2
+• Yerelleştirme: Türkiye'de yaygın olarak satılan en az 10.000 temel ürünün barkod
+verisinin sisteme entegre edilmesi.
+4. ÖZGÜN DEĞER
+MarketGöz projesini benzer çalışmalardan ayıran en önemli özellik "Niş Odaklanma"
+ve "Yerel Entegrasyon"dur:
+• Hibrit Tanıma Sistemi: Sadece barkod okumakla kalmaz, aynı zamanda görüntü
+işleme (OCR) teknolojisini kullanarak ambalaj üzerindeki metinleri tarar.
+Özelleştirilmiş algoritması sayesinde, karmaşık yazılar arasından sadece tarih
+formatlarını (Örn: "SKT: 12.2025" veya "TETT: 05/26") filtreleyip ayıklar.
+• Yerli ve Milli Veri Tabanı: Yabancı menşeli uygulamalar Türkiye'deki yerel
+markaları tanımakta zorlanırken, MarketGöz yerel veritabanları ile entegre çalışarak
+Türkiye şartlarına uygun çözümler üretir.
+5. YÖNTEM VE HEDEF KİTLE
+Hedef Kitle: Projemiz birincil olarak Türkiye'deki görme engelli bireyleri ve yaşlılığa
+bağlı görme kaybı yaşayan (az gören) vatandaşları hedeflemektedir.
+Yöntem: Proje, Çevik (Agile) yazılım geliştirme metodolojisi ile yürütülecektir.
+• Platform: Flutter (Dart) dili kullanılarak hem iOS hem de Android uyumlu
+"Cross-Platform" bir yapı kurulacaktır.
+• Görüntü İşleme (Backend): Google ML Kit'in "Text Recognition" ve "Barcode
+Scanning" API'leri kullanılacaktır.
+• Algoritma: Python ile geliştirilecek bir ara katman, OCR'dan gelen ham metin
+verilerini Regex kullanarak işleyecektir.
+• Veritabanı: Firebase Realtime Database kullanılarak ürün barkodları, isimleri ve
+gramaj bilgileri tutulacaktır.
+6. PROJE TAKVİMİ
+Projenin geliştirilme süreci 4 aylık bir takvime yayılmıştır:
+• 1. Ay: Literatür taraması, gereksinim analizi ve UI/UX (Kullanıcı Arayüzü)
+tasarımlarının yapılması.
+• 2. Ay: Barkod okuma modülünün kodlanması ve veritabanı entegrasyonu.
+• 3. Ay: SKT (Tarih) okuma algoritmasının geliştirilmesi ve görüntü işleme testleri.
+• 4. Ay: Sesli asistan (Text-to-Speech) entegrasyonu, saha testleri ve uygulama
+marketlerine yükleme hazırlığı.
+7. MALİYET HESAPLAMASI
+Projemiz yazılım tabanlı olduğu için yüksek donanım maliyetleri içermemektedir.
+• Yazılım Geliştirme: Takım üyeleri (Mekatronik Mühendisliği öğrencileri) tarafından
+yapılacağı için işçilik maliyeti öğrenci bütçesi kapsamındadır (0 TL).
+• Sunucu/Veritabanı: Firebase "Spark Plan" (Ücretsiz Kota) başlangıç aşaması için
+yeterlidir. İlerleyen aşamada aylık tahmini 200 TL sunucu gideri öngörülmektedir.
+Sayfa 3
+• Lisanslama: Google Play Console ve Apple Developer Program hesap ücretleri
+için yaklaşık 4.000 TL bütçe öngörülmektedir.
+8. YAYGIN ETKİ
+• Sosyal Etki: Görme engelli bireylerin başkalarına bağımlı olmadan alışveriş
+yapabilmesi, onların özgüvenini artıracak ve toplumsal hayata katılımlarını
+güçlendirecektir.
+• Ekonomik Etki: Yanlış ürün alımının ve tarihi geçmiş ürünlerin çöpe atılmasının
+önüne geçilerek hane ekonomisine katkı sağlanacaktır.
+• Ulusal Etki: Yerli kaynaklarla geliştirilen bu teknoloji, Türkiye'deki engelsiz yaşam
+teknolojileri literatürüne katkı sağlayacaktır.
+9. BELİRTMEK İSTEDİĞİNİZ DİĞER KONULAR
+Şekil 1: MarketGöz Uygulaması Sonuç Ekranı Prototipi
+Görselde, uygulamanın görme engelli bireyler için geliştirilmiş yüksek kontrastlı ve büyük butonlu
+arayüzü bir iPhone üzerinde gösterilmektedir. Ürün bilgisi, fiyatı ve en önemlisi gıda güvenliği için
+hayati olan Son Kullanma Tarihi (SKT) durumu, renk kodlaması (Güvenli için Yeşil) ve büyük
+puntolarla kullanıcıya sunulmaktadır. Alt kısımdaki büyük sarı buton ile tüm bilgiler sesli olarak tekrar
+dinlenebilmektedir.
+10. KAYNAKLAR
+1. Dünya Sağlık Örgütü (WHO), "World Report on Vision", 2019.
+2. TÜİK, "Türkiye Sağlık Araştırması", 2022.
+3. Google ML Kit Documentation, "Text Recognition and Barcode Scanning APIs".
+4. Resmi Gazete, "Türk Gıda Kodeksi Etiketleme ve Tüketicileri Bilgilendirme
+Yönetmeliği".
+Sayfa 4
