@@ -2,6 +2,12 @@
 
 AI-powered shopping assistant for visually impaired users in Turkey. Provides barcode scanning, product identification, and expiry date detection with Turkish voice feedback.
 
+## Showcase
+
+[![MarketGöz showcase video](docs/showcase.jpg)](showcase.mp4)
+
+▶️ [Watch the showcase video (67 s, sound on)](showcase.mp4): mode selection, expiry-date reading, barcode lookup, barcode + date matching, object detection with an expired-product warning, and saving to the product database, all with Turkish voice feedback.
+
 ## How it works
 
 The app opens straight into a **guided scan**. The user holds a product in front of the rear camera and the app talks them through it:
@@ -65,7 +71,7 @@ lib/
 
 ## Team
 
-**MekaGöz** - İSTEFEST 2025
+**MekaGöz** - İSTEFEST
 - Onur Sabri Yıldız
 - Tuğba Asude Nacar
 
