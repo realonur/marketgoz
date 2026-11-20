@@ -75,4 +75,4 @@ lib/
 - Onur Sabri Yıldız
 - Tuğba Asude Nacar
 
-Mechatronics Engineering, 3rd Year
+Mechatronics Engineering
