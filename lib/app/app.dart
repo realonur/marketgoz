@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import '../features/home/presentation/home_screen.dart';
+import '../features/guided_scan/guided_scan_screen.dart';
 
 /// MarketGöz App - Accessibility-focused with yellow/black theme
 class MarketGozApp extends StatelessWidget {
@@ -85,7 +85,7 @@ class MarketGozApp extends StatelessWidget {
           thickness: 2,
         ),
       ),
-      home: const HomeScreen(),
+      home: const GuidedScanScreen(),
     );
   }
 }

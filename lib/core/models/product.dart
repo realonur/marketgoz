@@ -6,7 +6,6 @@ class Product {
   final double price;
   final String weight;
   final DateTime? lastUpdated;
-  final DateTime? expiryDate;
 
   const Product({
     required this.barcode,
@@ -16,7 +15,6 @@ class Product {
     required this.price,
     required this.weight,
     this.lastUpdated,
-    this.expiryDate,
   });
 
   /// Create a copy with updated fields
@@ -28,7 +26,6 @@ class Product {
     double? price,
     String? weight,
     DateTime? lastUpdated,
-    DateTime? expiryDate,
   }) {
     return Product(
       barcode: barcode ?? this.barcode,
@@ -38,7 +35,6 @@ class Product {
       price: price ?? this.price,
       weight: weight ?? this.weight,
       lastUpdated: lastUpdated ?? this.lastUpdated,
-      expiryDate: expiryDate ?? this.expiryDate,
     );
   }
 
@@ -53,9 +49,6 @@ class Product {
       lastUpdated: json['lastUpdated'] != null
           ? DateTime.fromMillisecondsSinceEpoch(json['lastUpdated'] as int)
           : null,
-      expiryDate: json['expiryDate'] != null
-          ? DateTime.fromMillisecondsSinceEpoch(json['expiryDate'] as int)
-          : null,
     );
   }
 
@@ -68,44 +61,11 @@ class Product {
       'price': price,
       'weight': weight,
       'lastUpdated': lastUpdated?.millisecondsSinceEpoch,
-      'expiryDate': expiryDate?.millisecondsSinceEpoch,
     };
-  }
-
-  /// Check if product is expired
-  bool get isExpired {
-    if (expiryDate == null) return false;
-    return DateTime.now().isAfter(expiryDate!);
-  }
-
-  /// Get days until expiry (negative if expired)
-  int? get daysUntilExpiry {
-    if (expiryDate == null) return null;
-    return expiryDate!.difference(DateTime.now()).inDays;
-  }
-
-  /// Get expiry status text in Turkish
-  String get expiryStatusText {
-    if (expiryDate == null) return 'Son kullanma tarihi bilinmiyor';
-
-    final days = daysUntilExpiry!;
-    if (days < 0) {
-      return '${-days} gün önce süresi dolmuş!';
-    } else if (days == 0) {
-      return 'Bugün son kullanma tarihi!';
-    } else if (days == 1) {
-      return 'Yarın son kullanma tarihi';
-    } else if (days <= 7) {
-      return '$days gün içinde süresi dolacak';
-    } else if (days <= 30) {
-      return '${(days / 7).floor()} hafta içinde süresi dolacak';
-    } else {
-      return '$days gün sonra süresi dolacak';
-    }
   }
 
   @override
   String toString() {
-    return 'Product(name: $name, brand: $brand, price: $price TL, expiry: $expiryDate)';
+    return 'Product(name: $name, brand: $brand, price: $price TL)';
   }
 }

@@ -171,7 +171,6 @@ class FirebaseService {
         'category': product.category,
         'price': product.price,
         'weight': product.weight,
-        'expiryDate': product.expiryDate?.millisecondsSinceEpoch,
       };
 
       // Save to persistent storage
@@ -186,9 +185,6 @@ class FirebaseService {
       debugPrint('║ Name: ${product.name}');
       debugPrint('║ Category: ${product.category}');
       debugPrint('║ Price: ${product.price} TL');
-      if (product.expiryDate != null) {
-        debugPrint('║ Expiry: ${product.expiryDate}');
-      }
       debugPrint('╚════════════════════════════════════════╝');
     } catch (e) {
       debugPrint('Error adding product: $e');
@@ -208,131 +204,15 @@ class FirebaseService {
         'category': product.category,
         'price': product.price,
         'weight': product.weight,
-        'expiryDate': product.expiryDate?.millisecondsSinceEpoch,
       };
 
       // Save to persistent storage
       await _saveToStorage();
 
       debugPrint('📝 Product updated: ${product.barcode}');
-      if (product.expiryDate != null) {
-        debugPrint('   📅 Expiry date: ${product.expiryDate}');
-      }
     } catch (e) {
       debugPrint('Error updating product: $e');
     }
-  }
-
-  /// Update expiry date for a product by barcode
-  Future<void> updateProductExpiry(String barcode, DateTime expiryDate) async {
-    if (!_isInitialized) {
-      await initialize();
-    }
-
-    try {
-      if (_productDatabase.containsKey(barcode)) {
-        // Update existing product with new expiry date
-        _productDatabase[barcode]!['expiryDate'] =
-            expiryDate.millisecondsSinceEpoch;
-        await _saveToStorage();
-
-        debugPrint('');
-        debugPrint('╔════════════════════════════════════════╗');
-        debugPrint('║  📅 EXPIRY DATE LINKED TO BARCODE      ║');
-        debugPrint('╠════════════════════════════════════════╣');
-        debugPrint('║ Barcode: $barcode');
-        debugPrint(
-            '║ Expiry: ${expiryDate.day}/${expiryDate.month}/${expiryDate.year}');
-        debugPrint('╚════════════════════════════════════════╝');
-      } else {
-        // Create a placeholder product with just the expiry date
-        _productDatabase[barcode] = {
-          'name': 'Bilinmeyen Ürün',
-          'brand': 'Bilinmeyen',
-          'category': 'Diğer',
-          'price': 0.0,
-          'weight': '',
-          'expiryDate': expiryDate.millisecondsSinceEpoch,
-        };
-        await _saveToStorage();
-
-        debugPrint('');
-        debugPrint('╔════════════════════════════════════════╗');
-        debugPrint('║  📅 NEW BARCODE-EXPIRY CREATED         ║');
-        debugPrint('╠════════════════════════════════════════╣');
-        debugPrint('║ Barcode: $barcode');
-        debugPrint(
-            '║ Expiry: ${expiryDate.day}/${expiryDate.month}/${expiryDate.year}');
-        debugPrint('╚════════════════════════════════════════╝');
-      }
-    } catch (e) {
-      debugPrint('Error updating product expiry: $e');
-    }
-  }
-
-  /// Find a product by expiry date (for date-first scanning)
-  /// Returns the first product that has the matching expiry date
-  Future<Product?> findProductByExpiryDate(DateTime expiryDate) async {
-    if (!_isInitialized) {
-      await initialize();
-    }
-
-    try {
-      for (var entry in _productDatabase.entries) {
-        final data = Map<String, dynamic>.from(entry.value);
-        if (data['expiryDate'] != null) {
-          final productExpiry = DateTime.fromMillisecondsSinceEpoch(data['expiryDate']);
-          // Check if same day (ignore time)
-          if (productExpiry.year == expiryDate.year &&
-              productExpiry.month == expiryDate.month &&
-              productExpiry.day == expiryDate.day) {
-            data['barcode'] = entry.key;
-            debugPrint('🔍 Found product matching expiry date: ${entry.key}');
-            return Product.fromJson(data);
-          }
-        }
-      }
-    } catch (e) {
-      debugPrint('Error finding product by expiry: $e');
-    }
-    return null;
-  }
-
-  /// Get all products with expiry dates
-  Future<List<Product>> getProductsWithExpiry() async {
-    if (!_isInitialized) {
-      await initialize();
-    }
-
-    final products = <Product>[];
-    for (var entry in _productDatabase.entries) {
-      final data = Map<String, dynamic>.from(entry.value);
-      if (data['expiryDate'] != null) {
-        data['barcode'] = entry.key;
-        products.add(Product.fromJson(data));
-      }
-    }
-
-    // Sort by expiry date (soonest first)
-    products.sort((a, b) {
-      if (a.expiryDate == null) return 1;
-      if (b.expiryDate == null) return -1;
-      return a.expiryDate!.compareTo(b.expiryDate!);
-    });
-
-    return products;
-  }
-
-  /// Get products expiring soon (within specified days)
-  Future<List<Product>> getProductsExpiringSoon({int days = 7}) async {
-    final products = await getProductsWithExpiry();
-    final now = DateTime.now();
-    final threshold = now.add(Duration(days: days));
-
-    return products.where((p) {
-      if (p.expiryDate == null) return false;
-      return p.expiryDate!.isBefore(threshold);
-    }).toList();
   }
 
   /// Delete a product from database
